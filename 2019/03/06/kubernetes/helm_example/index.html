@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Saiun">
+    
+    <meta name="description" content="coding">
+    
+    
+    
+    
+    
+    
+    <title>helm example | ASaiun&#39;blog</title>
+    <link href=”https://asaiun.github.io“ rel=”prefetch” />
+
+    <link rel="stylesheet" href="../../../../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../../../css/aos.css">
+<link rel="stylesheet" href="../../../../../css/style.css">
+    <script src="../../../../../js/jquery.min.js"></script>
+    <script src="../../../../../js/bootstrap.min.js"></script>
+    <script src="../../../../../js/aos.js"></script>
+    <script src="../../../../../js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="../../../../../js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '../../../../../imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '../../../../../imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://asaiun.github.io" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="../../../../../archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="../../../../../about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="../../../../../message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="../../../../../imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://asaiun.github.io">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">ASaiun&#39;blog</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="../../../../../index.html">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://asaiun.github.io">ASaiun&#39;blog</a>
+        >
+        <span>helm example</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="">helm example</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="../../../../../tags/k8s/">k8s</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-03-06
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="">helm example</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-03-06
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="../../../../../tags/k8s/">k8s</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <pre><code>
+
+[root@k8smaster1 volume]# helm version
+Client: &version.Version{SemVer:"v2.11.0", GitCommit:"2e55dbe1fdb5fdb96b75ff144a339489417b146b", GitTreeState:"clean"}
+Server: &version.Version{SemVer:"v2.11.0", GitCommit:"2e55dbe1fdb5fdb96b75ff144a339489417b146b", GitTreeState:"clean"}
+[root@k8smaster1 volume]#
+
+Helm 可以像 apt 和 yum 管理软件包一样管理 chart。apt 和 yum 的软件包存放在仓库中，同样的，Helm 也有仓库
+
+[root@k8smaster1 volume]# helm repo list
+NAME    URL
+stable  https://kubernetes-charts.storage.googleapis.com
+local   http://127.0.0.1:8879/charts
+newrepo http://10.175.245.136:8080/charts
+coreos  https://s3-eu-west-1.amazonaws.com/coreos-charts/stable/
+[root@k8smaster1 volume]#
+
+Helm 安装时已经默认配置好了两个仓库：stable 和 local。stable 是官方仓库，local 是用户存放自己开发的 chart 的本地仓库
+
+安装 chart 也很简单，执行如下命令可以安装 MySQL
+[root@k8smaster1 ~]# helm install stable/mysql
+NAME:   mortal-unicorn
+LAST DEPLOYED: Tue Jan  1 02:50:50 2019
+NAMESPACE: default
+STATUS: DEPLOYED
+
+RESOURCES:
+==> v1/Pod(related)
+NAME                                   READY  STATUS   RESTARTS  AGE
+mortal-unicorn-mysql-7d88596cfb-g7nc7  0/1    Pending  0         1s
+
+==> v1/Secret
+
+NAME                  AGE
+mortal-unicorn-mysql  1s
+
+==> v1/ConfigMap
+mortal-unicorn-mysql-test  1s
+
+==> v1/PersistentVolumeClaim
+mortal-unicorn-mysql  1s
+
+==> v1/Service
+mortal-unicorn-mysql  1s
+
+==> v1beta1/Deployment
+mortal-unicorn-mysql  1s
+
+
+NOTES:
+MySQL can be accessed via port 3306 on the following DNS name from within your cluster:
+mortal-unicorn-mysql.default.svc.cluster.local
+
+To get your root password run:
+
+    MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default mortal-unicorn-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
+
+To connect to your database:
+
+1. Run an Ubuntu pod that you can use as a client:
+
+    kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
+
+2. Install the mysql client:
+
+    $ apt-get update && apt-get install mysql-client -y
+
+3. Connect using the mysql cli, then provide your password:
+    $ mysql -h mortal-unicorn-mysql -p
+
+To connect to your database directly from outside the K8s cluster:
+    MYSQL_HOST=127.0.0.1
+    MYSQL_PORT=3306
+
+    # Execute the following command to route the connection:
+    kubectl port-forward svc/mortal-unicorn-mysql 3306
+
+    mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
+
+
+[root@k8smaster1 ~]#
+[root@k8smaster1 ~]# helm list
+NAME                    REVISION        UPDATED                         STATUS          CHART                           APP VERSION     NAMESPACE
+alertmanager            1               Wed Nov 28 08:18:47 2018        DEPLOYED        alertmanager-0.1.7              0.15.1          monitoring
+grafana                 1               Wed Nov 28 08:18:52 2018        DEPLOYED        grafana-0.0.37                                  monitoring
+kube-prometheus         1               Wed Nov 28 08:45:44 2018        DEPLOYED        kube-prometheus-0.0.105                         monitoring
+mortal-unicorn          1               Tue Jan  1 02:50:50 2019        DEPLOYED        mysql-0.10.2                    5.7.14          default
+prometheus              1               Wed Nov 28 08:18:42 2018        DEPLOYED        prometheus-0.0.51                               monitoring
+prometheus-operator     1               Wed Nov 28 08:17:01 2018        DEPLOYED        prometheus-operator-0.0.29      0.20.0          monitoring
+[root@k8smaster1 ~]#
+
+
+[root@k8smaster1 ~]# kubectl get pod
+NAME                                    READY   STATUS    RESTARTS   AGE
+mortal-unicorn-mysql-7d88596cfb-g7nc7   0/1     Pending   0          10m
+mypod1                                  1/1     Running   2          18h
+producer-consumer                       2/2     Running   24         18h
+ubuntu                                  1/1     Running   0          3m24s
+[root@k8smaster1 ~]#
+
+[root@k8smaster1 ~]#
+[root@k8smaster1 ~]# kubectl describe pvc mortal-unicorn-mysql
+Name:          mortal-unicorn-mysql
+Namespace:     default
+StorageClass:
+Status:        Pending
+Volume:
+Labels:        app=mortal-unicorn-mysql
+               chart=mysql-0.10.2
+               heritage=Tiller
+               release=mortal-unicorn
+Annotations:   <none>
+Finalizers:    [kubernetes.io/pvc-protection]
+Capacity:
+Access Modes:
+Events:
+  Type       Reason         Age                 From                         Message
+  ----       ------         ----                ----                         -------
+  Normal     FailedBinding  87s (x43 over 11m)  persistentvolume-controller  no persistent volumes available for this claim and no storage class is set
+Mounted By:  mortal-unicorn-mysql-7d88596cfb-g7nc7
+[root@k8smaster1 ~]#
+
+[root@k8smaster1 ~]# kubectl get pv
+NAME    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM            STORAGECLASS   REASON   AGE
+mypv1   1Gi        RWO            Recycle          Bound    default/mypvc1   nfs                     18h
+[root@k8smaster1 ~]#
+
+
+
+
+[root@k8smaster1 volume]# kubectl edit pvc mortal-unicorn-mysql
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: 2019-01-01T07:50:50Z
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: mortal-unicorn-mysql
+    chart: mysql-0.10.2
+    heritage: Tiller
+    release: mortal-unicorn
+  name: mortal-unicorn-mysql
+  namespace: default
+  resourceVersion: "3835298"
+  selfLink: /api/v1/namespaces/default/persistentvolumeclaims/mortal-unicorn-mysql
+  uid: f4e676c6-0d99-11e9-bbdf-a2da634cab88
+spec:
+  accessModes:
+  - ReadWriteOnce
+  dataSource: null
+  resources:
+    requests:
+      storage: 8Gi
+status:
+  phase: Pending
+
+
+-------------------------------------------------------------------------
+（说明：中间删除之后，重新部署了一次，pod 的名字后面有变化。不影响理解。)
+
+[root@k8smaster1 volume]# helm delete mortal-unicorn
+release "mortal-unicorn" deleted
+[root@k8smaster1 volume]#
+--------------------------------------------------------------------------
+创建好8G的pv
+[root@k8smaster1 volume]# cat nfs-pv8.yml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mypv2
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: nfs
+  nfs:
+    path: /root/nfsdir/pv2
+    server: 10.175.245.133
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]# kubectl apply -f nfs-pv8.yml
+persistentvolume/mypv2 created
+[root@k8smaster1 volume]# kubectl get pv
+NAME    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM            STORAGECLASS   REASON   AGE
+mypv1   1Gi        RWO            Recycle          Bound       default/mypvc1   nfs                     18h
+mypv2   8Gi        RWO            Recycle          Available                    nfs                     7s
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]#
+使用下面的这个，重新创建！！！！！！！
+[root@k8smaster1 volume]# cat nfs-pv8.yml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mypv2
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /root/nfsdir/pv2
+    server: 10.175.245.133
+[root@k8smaster1 volume]#
+
+
+[root@k8smaster1 volume]# kubectl edit pv mypv2
+persistentvolume/mypv2 edited
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]# kubectl get pv
+NAME    CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                             STORAGECLASS   REASON   AGE
+mypv1   1Gi        RWO            Recycle          Bound    default/mypvc1                    nfs                     18h
+mypv2   8Gi        RWO            Recycle          Bound    default/exacerbated-chimp-mysql                           15m
+[root@k8smaster1 volume]#
+
+[root@k8smaster1 volume]# cd /root/nfsdir/
+[root@k8smaster1 nfsdir]# mkdir pv2
+[root@k8smaster1 nfsdir]# ls
+mysql-pv  pv1  pv2
+[root@k8smaster1 nfsdir]#
+
+root@k8smaster1 volume]# kubectl get pod
+NAME                                       READY   STATUS     RESTARTS   AGE
+exacerbated-chimp-mysql-6946db755d-75grk   0/1     Init:0/1   0          11s
+mypod1                                     1/1     Running    2          18h
+producer-consumer                          2/2     Running    24         19h
+ubuntu                                     1/1     Running    0          34m
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]#
+[root@k8smaster1 volume]# kubectl describe pod exacerbated-chimp-mysql-6946db755d-75grk
+
+Events:
+  Type     Reason       Age   From               Message
+  ----     ------       ----  ----               -------
+  Normal   Scheduled    25s   default-scheduler  Successfully assigned default/exacerbated-chimp-mysql-6946db755d-75grk to k8snode1
+  Warning  FailedMount  23s   kubelet, k8snode1  MountVolume.SetUp failed for volume "mypv2" : mount failed: exit status 32
+Mounting command: systemd-run
+Mounting arguments: --description=Kubernetes transient mount for /var/lib/kubelet/pods/a392d296-0d9f-11e9-bbdf-a2da634cab88/volumes/kubernetes.io~nfs/mypv2 --scope -- mount -t nfs 10.175.245.133:/root/nfsdir/pv2 /var/lib/kubelet/pods/a392d296-0d9f-11e9-bbdf-a2da634cab88/volumes/kubernetes.io~nfs/mypv2
+Output: Running scope as unit run-23353.scope.
+mount.nfs: mounting 10.175.245.133:/root/nfsdir/pv2 failed, reason given by server: No such file or directory
+  Warning  FailedMount  23s  kubelet, k8snode1  MountVolume.SetUp failed for volume "mypv2" : mount failed: exit status 32
+
+[root@k8smaster1 nfsdir]# kubectl get pod
+NAME                                       READY   STATUS    RESTARTS   AGE
+exacerbated-chimp-mysql-6946db755d-75grk   1/1     Running   0          112s
+mypod1                                     1/1     Running   2          18h
+producer-consumer                          2/2     Running   24         19h
+ubuntu                                     1/1     Running   0          35m
+[root@k8smaster1 nfsdir]#
+
+部署完成
+连接测试：
+获取密码
+[root@k8smaster1 ~]# kubectl get secret --namespace default exacerbated-chimp-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo
+yVpvM68udy
+[root@k8smaster1 ~]#
+
+[root@k8smaster1 ~]# kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
+If you don't see a command prompt, try pressing enter.
+root@ubuntu:/#
+root@ubuntu:/#
+root@ubuntu:/# apt-get update && apt-get install mysql-client -y
+Get:1 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [107 kB]
+Get:3 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [762 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:7 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:8 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [522 kB]
+Get:9 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [4026 B]
+Get:6 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1163 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [925 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [19.0 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7942 B]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [8532 B]
+Fetched 14.2 MB in 9s (1545 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libaio1 libbsd0 libedit2 libnuma1 mysql-client-5.7 mysql-client-core-5.7 mysql-common
+The following NEW packages will be installed:
+  libaio1 libbsd0 libedit2 libnuma1 mysql-client mysql-client-5.7 mysql-client-core-5.7 mysql-common
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7921 kB of archives.
+After this operation, 66.2 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libbsd0 amd64 0.8.2-1 [41.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libedit2 amd64 3.1-20150325-1ubuntu2 [76.5 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnuma1 amd64 2.0.11-1ubuntu1.1 [21.0 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaio1 amd64 0.3.110-2 [6356 B]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mysql-client-core-5.7 amd64 5.7.24-0ubuntu0.16.04.1 [6030 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mysql-common all 5.7.24-0ubuntu0.16.04.1 [15.3 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mysql-client-5.7 amd64 5.7.24-0ubuntu0.16.04.1 [1720 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mysql-client all 5.7.24-0ubuntu0.16.04.1 [10.1 kB]
+Fetched 7921 kB in 3s (2161 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libbsd0:amd64.
+(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../libbsd0_0.8.2-1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.8.2-1) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../libedit2_3.1-20150325-1ubuntu2_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20150325-1ubuntu2) ...
+Selecting previously unselected package libnuma1:amd64.
+Preparing to unpack .../libnuma1_2.0.11-1ubuntu1.1_amd64.deb ...
+Unpacking libnuma1:amd64 (2.0.11-1ubuntu1.1) ...
+Selecting previously unselected package libaio1:amd64.
+Preparing to unpack .../libaio1_0.3.110-2_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.110-2) ...
+Selecting previously unselected package mysql-client-core-5.7.
+Preparing to unpack .../mysql-client-core-5.7_5.7.24-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking mysql-client-core-5.7 (5.7.24-0ubuntu0.16.04.1) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../mysql-common_5.7.24-0ubuntu0.16.04.1_all.deb ...
+Unpacking mysql-common (5.7.24-0ubuntu0.16.04.1) ...
+Selecting previously unselected package mysql-client-5.7.
+Preparing to unpack .../mysql-client-5.7_5.7.24-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking mysql-client-5.7 (5.7.24-0ubuntu0.16.04.1) ...
+Selecting previously unselected package mysql-client.
+Preparing to unpack .../mysql-client_5.7.24-0ubuntu0.16.04.1_all.deb ...
+Unpacking mysql-client (5.7.24-0ubuntu0.16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Setting up libbsd0:amd64 (0.8.2-1) ...
+Setting up libedit2:amd64 (3.1-20150325-1ubuntu2) ...
+Setting up libnuma1:amd64 (2.0.11-1ubuntu1.1) ...
+Setting up libaio1:amd64 (0.3.110-2) ...
+Setting up mysql-client-core-5.7 (5.7.24-0ubuntu0.16.04.1) ...
+Setting up mysql-common (5.7.24-0ubuntu0.16.04.1) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up mysql-client-5.7 (5.7.24-0ubuntu0.16.04.1) ...
+Setting up mysql-client (5.7.24-0ubuntu0.16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+root@ubuntu:/#
+root@ubuntu:/#
+root@ubuntu:/#
+root@ubuntu:/# mysql -h exacerbated-chimp-mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 32
+Server version: 5.7.14 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql> use mysql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql>
+mysql>
+mysql> show tables
+    -> ;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| db                        |
+| engine_cost               |
+| event                     |
+| func                      |
+| general_log               |
+| gtid_executed             |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| innodb_index_stats        |
+| innodb_table_stats        |
+| ndb_binlog_index          |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| server_cost               |
+| servers                   |
+| slave_master_info         |
+| slave_relay_log_info      |
+| slave_worker_info         |
+| slow_log                  |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+31 rows in set (0.00 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+​Kubeapps 提供了一个开源的 Helm UI 界面，方便以图形界面的形式管理 Helm 应用。
+安装
+https://github.com/kubeapps/kubeapps/blob/master/docs/user/getting-started.md
+
+
+[root@k8smaster1 ~]# kubectl get secret $(kubectl get serviceaccount kubeapps-operator -o jsonpath='{.secrets[].name}') -o jsonpath                                ='{.data.token}' | base64 --decode
+eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2                                UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Imt1YmVhcHBzLW9wZXJhdG9yLXRva2VuLXh2enM5Iiwia3ViZXJuZXRlc                                y5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Imt1YmVhcHBzLW9wZXJhdG9yIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNl                                LWFjY291bnQudWlkIjoiMDU3YTBiNDgtMGRhMy0xMWU5LWJiZGYtYTJkYTYzNGNhYjg4Iiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6a3ViZWFwcHM                                tb3BlcmF0b3IifQ.CP_kZ7C3fuwpDHSp5S6wBealn0rCKbWHG1sRbETrmnzX4OSHz0BhosM_iJAZGdouCPzhHFf7Dvtsp9GeCtPhdS6Wvj3YUmlA5Shf9CrOEz2wE8e-8ws                                oW1oUzusVYvJwLNjeLLhSF5cgvH-VfHYsS8TZO3VwEPv47xP-gzmmVDIR2Lxk2EcoTXbZrEdH227xYfxmPFjQ9jKGUJMXBPdGPN5K6LYnSkEhRwuXF1bHnIYvGQw0O3nr9b                                3cfHRhoiwYABJRctU8rUwDqrlTQiloXZkQOtMsqAE7K6h0orbmO3V51GU2uCjYnyWP5ebqqZ5x9gd1tLcIqAHaW2hW4B1u5g[root@k8smaster1 ~]#
+[root@k8smaster1 ~]#
+[root@k8smaster1 ~]# helm repo add bitnami https://charts.bitnami.com/bitnami
+"bitnami" has been added to your repositories
+[root@k8smaster1 ~]# helm install --name kubeapps --namespace kubeapps bitnami/kubeapps
+NAME:   kubeapps
+LAST DEPLOYED: Tue Jan  1 03:55:16 2019
+NAMESPACE: kubeapps
+STATUS: DEPLOYED
+
+RESOURCES:
+==> v1/Service
+NAME                            AGE
+kubeapps-mongodb                2s
+kubeapps-internal-chartsvc      2s
+kubeapps-internal-dashboard     2s
+kubeapps                        2s
+kubeapps-internal-tiller-proxy  2s
+
+==> v1alpha1/AppRepository
+bitnami    1s
+incubator  1s
+svc-cat    1s
+stable     1s
+
+==> v1beta1/Role
+kubeapps-internal-apprepository-controller  2s
+kubeapps-internal-tiller-proxy              2s
+
+==> v1/ServiceAccount
+kubeapps-internal-apprepository-controller  2s
+kubeapps-internal-tiller-proxy              2s
+
+==> v1beta1/RoleBinding
+kubeapps-internal-apprepository-controller  2s
+kubeapps-internal-tiller-proxy              2s
+
+==> v1beta1/Deployment
+kubeapps-mongodb  2s
+
+==> v1beta2/Deployment
+kubeapps-internal-apprepository-controller  2s
+kubeapps-internal-chartsvc                  2s
+kubeapps-internal-dashboard                 2s
+kubeapps                                    2s
+kubeapps-internal-tiller-proxy              2s
+
+==> v1/Pod(related)
+
+NAME                                                       READY  STATUS             RESTARTS  AGE
+kubeapps-mongodb-89c57f6f9-l7gmh                           0/1    Pending            0         1s
+kubeapps-internal-apprepository-controller-9b6f7647-bxgqm  0/1    ContainerCreating  0         1s
+kubeapps-internal-chartsvc-fdcdfb647-s8k5g                 0/1    Pending            0         1s
+kubeapps-internal-chartsvc-fdcdfb647-tpbtg                 0/1    ContainerCreating  0         1s
+kubeapps-internal-dashboard-6b78696f5f-8jg9c               0/1    Pending            0         1s
+kubeapps-internal-dashboard-6b78696f5f-qnlnc               0/1    ContainerCreating  0         1s
+kubeapps-68c5894f9b-m68vv                                  0/1    Pending            0         1s
+kubeapps-68c5894f9b-vzs2s                                  0/1    Pending            0         1s
+kubeapps-internal-tiller-proxy-bc66dfd6f-ltq99             0/1    Pending            0         1s
+kubeapps-internal-tiller-proxy-bc66dfd6f-pnpcp             0/1    Pending            0         1s
+
+==> v1/ConfigMap
+
+NAME                                AGE
+kubeapps-internal-dashboard-config  2s
+kubeapps-frontend-config            2s
+
+
+NOTES:
+** Please be patient while the chart is being deployed **
+
+Tip:
+
+  Watch the deployment status using the command: kubectl get pods -w --namespace kubeapps
+
+Kubeapps can be accessed via port 80 on the following DNS name from within your cluster:
+
+   kubeapps.kubeapps.svc.cluster.local
+
+To access Kubeapps from outside your K8s cluster, follow the steps below:
+
+1. Get the Kubeapps URL by running these commands:
+
+   echo "Kubeapps URL: http://127.0.0.1:8080"
+   export POD_NAME=$(kubectl get pods --namespace kubeapps -l "app=kubeapps" -o jsonpath="{.items[0].metadata.name}")
+   kubectl port-forward --namespace kubeapps $POD_NAME 8080:8080
+
+2. Open a browser and access Kubeapps using the obtained URL.
+
+[root@k8smaster1 ~]# kubectl create serviceaccount kubeapps-operator
+serviceaccount/kubeapps-operator created
+[root@k8smaster1 ~]# kubectl create clusterrolebinding kubeapps-operator --clusterrole=cluster-admin --serviceaccount=default:kubea                                pps-operator
+clusterrolebinding.rbac.authorization.k8s.io/kubeapps-operator created
+
+
+
+
+修改为NodePort的部署方式。
+[root@k8smaster1 ~]# helm fetch bitnami/kubeapps
+[root@k8smaster1 ~]# tar -zxvf kubeapps-1.2.0.tgz
+
+
+[root@k8smaster1 ~]# cd kubeapps/
+[root@k8smaster1 kubeapps]# ls
+charts  Chart.yaml  README.md  requirements.lock  requirements.yaml  templates  values.yaml
+[root@k8smaster1 kubeapps]#
+[root@k8smaster1 kubeapps]# cd templates/
+[root@k8smaster1 templates]# ls
+apprepositories.yaml                            apprepository-rbac.yaml            dashboard-service.yaml             mongodb-jobs-cleanup-rbac.yaml            til
+apprepository-crd.yaml                          apprepository-serviceaccount.yaml  _helpers.tpl                       mongodb-jobs-cleanup-serviceaccount.yaml  til
+apprepository-deployment.yaml                   chartsvc-deployment.yaml           ingress.yaml                       mongodb-jobs-cleanup.yaml                 til
+apprepository-jobs-cleanup-rbac.yaml            chartsvc-service.yaml              kubeapps-frontend-config.yaml      mongodb-secret-bootstrap.yaml             til
+apprepository-jobs-cleanup-serviceaccount.yaml  dashboard-config.yaml              kubeapps-frontend-deployment.yaml  NOTES.txt                                 til
+apprepository-jobs-cleanup.yaml                 dashboard-deployment.yaml          kubeapps-frontend-service.yaml     tests                                     tls
+[root@k8smaster1 templates]#
+
+[root@k8smaster1 templates]# vi dashboard-service.yaml
+
+[root@k8smaster1 templates]# helm upgrade kubeapps ~/kubeapps
+Release "kubeapps" has been upgraded. Happy Helming!
+LAST DEPLOYED: Tue Jan  1 04:17:43 2019
+NAMESPACE: kubeapps
+STATUS: DEPLOYED
+
+RESOURCES:
+==> v1/Service
+NAME                            AGE
+kubeapps-mongodb                22m
+kubeapps-internal-chartsvc      22m
+kubeapps-internal-dashboard     22m
+kubeapps                        22m
+kubeapps-internal-tiller-proxy  22m
+
+==> v1beta1/Deployment
+kubeapps-mongodb  22m
+
+==> v1beta2/Deployment
+kubeapps-internal-apprepository-controller  22m
+kubeapps-internal-chartsvc                  22m
+kubeapps-internal-dashboard                 22m
+kubeapps                                    22m
+kubeapps-internal-tiller-proxy              22m
+
+==> v1/ServiceAccount
+kubeapps-internal-apprepository-controller  22m
+kubeapps-internal-tiller-proxy              22m
+
+==> v1beta1/RoleBinding
+kubeapps-internal-apprepository-controller  22m
+kubeapps-internal-tiller-proxy              22m
+
+==> v1alpha1/AppRepository
+stable     22m
+incubator  22m
+svc-cat    22m
+bitnami    22m
+
+==> v1/Pod(related)
+
+NAME                                                       READY  STATUS   RESTARTS  AGE
+kubeapps-mongodb-89c57f6f9-l7gmh                           1/1    Running  0         22m
+kubeapps-internal-apprepository-controller-9b6f7647-bxgqm  1/1    Running  0         22m
+kubeapps-internal-chartsvc-fdcdfb647-s8k5g                 1/1    Running  0         22m
+kubeapps-internal-chartsvc-fdcdfb647-tpbtg                 1/1    Running  0         22m
+kubeapps-internal-dashboard-6b78696f5f-8jg9c               1/1    Running  0         22m
+kubeapps-internal-dashboard-6b78696f5f-qnlnc               1/1    Running  0         22m
+kubeapps-68c5894f9b-m68vv                                  1/1    Running  0         22m
+kubeapps-68c5894f9b-vzs2s                                  1/1    Running  0         22m
+kubeapps-internal-tiller-proxy-bc66dfd6f-ltq99             1/1    Running  0         22m
+kubeapps-internal-tiller-proxy-bc66dfd6f-pnpcp             1/1    Running  0         22m
+
+==> v1/ConfigMap
+
+NAME                                AGE
+kubeapps-internal-dashboard-config  22m
+kubeapps-frontend-config            22m
+
+==> v1beta1/Role
+kubeapps-internal-apprepository-controller  22m
+kubeapps-internal-tiller-proxy              22m
+
+
+NOTES:
+** Please be patient while the chart is being deployed **
+
+Tip:
+
+  Watch the deployment status using the command: kubectl get pods -w --namespace kubeapps
+
+Kubeapps can be accessed via port 80 on the following DNS name from within your cluster:
+
+   kubeapps.kubeapps.svc.cluster.local
+
+To access Kubeapps from outside your K8s cluster, follow the steps below:
+
+1. Get the Kubeapps URL by running these commands:
+
+   echo "Kubeapps URL: http://127.0.0.1:8080"
+   export POD_NAME=$(kubectl get pods --namespace kubeapps -l "app=kubeapps" -o jsonpath="{.items[0].metadata.name}")
+   kubectl port-forward --namespace kubeapps $POD_NAME 8080:8080
+
+2. Open a browser and access Kubeapps using the obtained URL.
+
+[root@k8smaster1 templates]#
+
+[root@k8smaster1 templates]# kubectl get svc --all-namespaces
+NAMESPACE     NAME                                               TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)               AGE
+default       alertmanager-operated                              ClusterIP   None             <none>        9093/TCP,6783/TCP     33d
+default       exacerbated-chimp-mysql                            ClusterIP   10.102.229.219   <none>        3306/TCP              56m
+default       kubernetes                                         ClusterIP   10.96.0.1        <none>        443/TCP               34d
+default       mysql                                              ClusterIP   10.107.164.9     <none>        3306/TCP              28d
+default       prometheus-operated                                ClusterIP   None             <none>        9090/TCP              33d
+kube-system   heapster                                           ClusterIP   10.107.86.78     <none>        80/TCP                34d
+kube-system   kube-dns                                           ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP         34d
+kube-system   kube-prometheus-exporter-kube-controller-manager   ClusterIP   None             <none>        10252/TCP             33d
+kube-system   kube-prometheus-exporter-kube-dns                  ClusterIP   None             <none>        10054/TCP,10055/TCP   33d
+kube-system   kube-prometheus-exporter-kube-etcd                 ClusterIP   None             <none>        4001/TCP              33d
+kube-system   kube-prometheus-exporter-kube-scheduler            ClusterIP   None             <none>        10251/TCP             33d
+kube-system   kubelet                                            ClusterIP   None             <none>        10250/TCP             33d
+kube-system   kubernetes-dashboard                               NodePort    10.100.125.245   <none>        443:30001/TCP         34d
+kube-system   monitoring-grafana                                 NodePort    10.97.70.44      <none>        80:30003/TCP          34d
+kube-system   monitoring-influxdb                                ClusterIP   10.104.135.235   <none>        8086/TCP              34d
+kube-system   tiller-deploy                                      ClusterIP   10.100.105.49    <none>        44134/TCP             33d
+kubeapps      kubeapps                                           ClusterIP   10.96.42.20      <none>        80/TCP                22m
+kubeapps      kubeapps-internal-chartsvc                         ClusterIP   10.104.163.227   <none>        8080/TCP              22m
+kubeapps      kubeapps-internal-dashboard                        NodePort    10.103.184.35    <none>        8080:30817/TCP        22m
+kubeapps      kubeapps-internal-tiller-proxy                     ClusterIP   10.109.255.154   <none>        8080/TCP              22m
+kubeapps      kubeapps-mongodb                                   ClusterIP   10.99.74.10      <none>        27017/TCP             22m
+monitoring    alertmanager                                       NodePort    10.96.59.152     <none>        9093:30006/TCP        33d
+monitoring    alertmanager-operated                              ClusterIP   None             <none>        9093/TCP,6783/TCP     33d
+monitoring    grafana-grafana                                    NodePort    10.105.167.174   <none>        80:30005/TCP          33d
+monitoring    kube-prometheus                                    ClusterIP   10.100.252.107   <none>        9090/TCP              33d
+monitoring    kube-prometheus-alertmanager                       ClusterIP   10.96.170.44     <none>        9093/TCP              33d
+monitoring    kube-prometheus-exporter-kube-state                ClusterIP   10.101.102.164   <none>        80/TCP                33d
+monitoring    kube-prometheus-exporter-node                      ClusterIP   10.100.167.61    <none>        9100/TCP              33d
+monitoring    kube-prometheus-grafana                            ClusterIP   10.111.196.86    <none>        80/TCP                33d
+monitoring    prometheus                                         NodePort    10.104.81.193    <none>        9090:30004/TCP        33d
+monitoring    prometheus-operated                                ClusterIP   None             <none>        9090/TCP              33d
+weave         weave-scope-app                                    NodePort    10.96.32.15      <none>        80:30002/TCP          34d
+[root@k8smaster1 templates]#
+[root@k8smaster1 templates]#
+
+</none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></none></code></pre>
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="../../../../../search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Saiun
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="../../../../../imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"><p>coding</p>
+</p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="">helm example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../basics_example/">basics example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../kube_scheduler_example/">kube_scheduler example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../volume_example/">volume example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/03/05/docker-安装与使用-centos/">docker-安装与使用-centos</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/03/02/ansible-安装和使用-centos/">ansible 安装和使用(centos)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/12/快速搭建属于自己的Ubuntu开发环境（Python）/">快速搭建属于自己的Ubuntu开发环境（Python）</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/04/UNIX环境下的编程第八章/">UNIX环境下的编程第八章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/03/UNIX环境下的编程第七章/">UNIX环境下的编程第七章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/01/UNIX环境下的编程第六章/">UNIX环境下的编程第六章</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2016/12/28/UNIX环境下的编程第一章/">UNIX环境下的编程第一章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2016/12/28/UNIX环境下的编程第二章/">UNIX环境下的编程第二章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/03/UNIX环境下的编程第七章/">UNIX环境下的编程第七章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/04/UNIX环境下的编程第八章/">UNIX环境下的编程第八章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/01/UNIX环境下的编程第六章/">UNIX环境下的编程第六章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/03/05/docker-安装与使用-centos/">docker-安装与使用-centos</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../basics_example/">basics example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../kube_scheduler_example/">kube_scheduler example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../volume_example/">volume example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="">helm example</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+                <li class="">
+                    <a href="#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                <li class="">
+                    <a href="#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                <li class="">
+                    <a href="#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="../../../../../tags/UNIX编程/" style="font-size: 8.454058873776244px;" class="tag-cloud-link">UNIX编程</a>
+    
+    <a href="../../../../../tags/读书笔记/" style="font-size: 19.032409427602px;" class="tag-cloud-link">读书笔记</a>
+    
+    <a href="../../../../../tags/docker/" style="font-size: 16.8122474852497px;" class="tag-cloud-link">docker</a>
+    
+    <a href="../../../../../tags/centos/" style="font-size: 8.86762557664468px;" class="tag-cloud-link">centos</a>
+    
+    <a href="../../../../../tags/python/" style="font-size: 14.502830048050797px;" class="tag-cloud-link">python</a>
+    
+    <a href="../../../../../tags/Ubuntu/" style="font-size: 13.966031125212751px;" class="tag-cloud-link">Ubuntu</a>
+    
+    <a href="../../../../../tags/开发环境/" style="font-size: 17.30708529586846px;" class="tag-cloud-link">开发环境</a>
+    
+    <a href="../../../../../tags/ansible/" style="font-size: 10.846706468058612px;" class="tag-cloud-link">ansible</a>
+    
+    <a href="../../../../../tags/k8s/" style="font-size: 9.903851958736553px;" class="tag-cloud-link">k8s</a>
+    
+</div>
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/ASaiun/" target="_blank">Github</a>
+    </li>
+    
+</div>
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Saiun Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="../../../../../js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '../../../../../imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="../../../../../js/hs.js"></script>
+<script src="../../../../../js/blog.js"></script>
+
+<script src="../../../../../js/oni.js"></script>
+
+
+
+</html>

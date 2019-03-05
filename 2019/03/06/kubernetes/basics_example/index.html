@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Saiun">
+    
+    <meta name="description" content="coding">
+    
+    
+    
+    
+    
+    
+    <title>basics example | ASaiun&#39;blog</title>
+    <link href=”https://asaiun.github.io“ rel=”prefetch” />
+
+    <link rel="stylesheet" href="../../../../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../../../css/aos.css">
+<link rel="stylesheet" href="../../../../../css/style.css">
+    <script src="../../../../../js/jquery.min.js"></script>
+    <script src="../../../../../js/bootstrap.min.js"></script>
+    <script src="../../../../../js/aos.js"></script>
+    <script src="../../../../../js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="../../../../../js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '../../../../../imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '../../../../../imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://asaiun.github.io" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="../../../../../archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="../../../../../about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="../../../../../message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="../../../../../imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://asaiun.github.io">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">ASaiun&#39;blog</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="../../../../../index.html">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../../about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://asaiun.github.io">ASaiun&#39;blog</a>
+        >
+        <span>basics example</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="">basics example</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="../../../../../tags/k8s/">k8s</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-03-06
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="">basics example</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-03-06
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="../../../../../tags/k8s/">k8s</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <pre><code>
+
+创建一个pod(自动创建deployment)
+[root@twok8smaster ~]# kubectl run --image=nginx:alpine nginx-app --port=80
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/nginx-app created
+[root@twok8smaster ~]#
+[root@twok8smaster ~]#
+
+创建一个pod(无deployment)
+[root@twok8smaster ~]#
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# kubectl run --image=nginx:alpine nginx-app --port=80 --generator=run-pod/v1
+pod/nginx-app created
+
+查看
+[root@twok8smaster ~]# kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+nginx-app                    1/1     Running   0          4m48s
+nginx-app-59d8db7579-vq9wj   1/1     Running   0          5m58s
+[root@twok8smaster ~]#
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# kubectl get deployment
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-app   1/1     1            1           49m
+[root@twok8smaster ~]#
+
+分别删除之前创建的两个pod
+[root@twok8smaster ~]# kubectl delete pod nginx-app
+pod "nginx-app" deleted
+[root@twok8smaster ~]# kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+nginx-app-59d8db7579-vq9wj   1/1     Running   0          50m
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# kubectl delete pod nginx-app-59d8db7579-vq9wj
+pod "nginx-app-59d8db7579-vq9wj" deleted
+[root@twok8smaster ~]# kubectl get pod
+NAME                         READY   STATUS              RESTARTS   AGE
+nginx-app-59d8db7579-k4kj9   0/1     ContainerCreating   0          17s
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+nginx-app-59d8db7579-k4kj9   1/1     Running   0          48s
+[root@twok8smaster ~]#
+
+有deployment的并没有删掉。自动创建了一个新的pod.
+
+
+kubectl get - 类似于 docker ps，查询资源列表
+kubectl describe - 类似于 docker inspect，获取资源的详细信息
+kubectl logs - 类似于 docker logs，获取容器的日志
+kubectl exec - 类似于 docker exec，在容器内执行一个命令
+
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+nginx-app-59d8db7579-k4kj9   1/1     Running   0          10m
+[root@twok8smaster ~]#
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# kubectl describe pod nginx-app-59d8db7579-k4kj9
+Name:               nginx-app-59d8db7579-k4kj9
+Namespace:          default
+Priority:           0
+PriorityClassName:  <none>
+Node:               twok8snode2/10.175.245.139
+Start Time:         Mon, 31 Dec 2018 04:41:50 -0500
+Labels:             pod-template-hash=59d8db7579
+                    run=nginx-app
+Annotations:        cni.projectcalico.org/podIP: 192.168.2.9/32
+Status:             Running
+IP:                 192.168.2.9
+Controlled By:      ReplicaSet/nginx-app-59d8db7579
+Containers:
+  nginx-app:
+    Container ID:   docker://bbdafcbfde5ec2243212c74c616ed2db897cd039c7f1c76c65c58a1ab7b65480
+    Image:          nginx:alpine
+    Image ID:       docker-pullable://nginx@sha256:385fbcf0f04621981df6c6f1abd896101eb61a439746ee2921b26abc78f45571
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Mon, 31 Dec 2018 04:42:37 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-cvs45 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  default-token-cvs45:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-cvs45
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type    Reason     Age    From                  Message
+  ----    ------     ----   ----                  -------
+  Normal  Scheduled  10m    default-scheduler     Successfully assigned default/nginx-app-59d8db7579-k4kj9 to twok8snode2
+  Normal  Pulled     9m46s  kubelet, twok8snode2  Container image "nginx:alpine" already present on machine
+  Normal  Created    9m46s  kubelet, twok8snode2  Created container
+  Normal  Started    9m46s  kubelet, twok8snode2  Started container
+[root@twok8smaster ~]#
+
+
+[root@twok8smaster ~]# kubectl get pod -o wide
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE          NOMINATED NODE   READINESS GATES
+nginx-app-59d8db7579-k4kj9   1/1     Running   0          11m   192.168.2.9   twok8snode2   <none>           <none>
+[root@twok8smaster ~]#
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# curl 192.168.2.9
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/" target="_blank" rel="noopener">nginx.org</a>.<br>
+Commercial support is available at
+<a href="http://nginx.com/" target="_blank" rel="noopener">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[root@twok8smaster ~]#
+
+[root@twok8smaster ~]# kubectl log nginx-app-59d8db7579-k4kj9
+log is DEPRECATED and will be removed in a future version. Use logs instead.
+192.168.0.1 - - [31/Dec/2018:09:53:36 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.29.0" "-"
+[root@twok8smaster ~]#
+
+[root@twok8smaster ~]# kubectl exec nginx-app-59d8db7579-k4kj9 ps aux
+PID   USER     TIME  COMMAND
+    1 root      0:00 nginx: master process nginx -g daemon off;
+    8 nginx     0:00 nginx: worker process
+    9 root      0:00 ps aux
+[root@twok8smaster ~]#
+[root@twok8smaster ~]#
+[root@twok8smaster ~]# kubectl exec -it nginx-app-59d8db7579-k4kj9 sh
+/ # ls
+bin    etc    lib    mnt    root   sbin   sys    usr
+dev    home   media  proc   run    srv    tmp    var
+/ # exit
+[root@twok8smaster ~]#
+
+
+-----------------------------------------使用 yaml 定义 Pod----------------------------------
+上面是通过 kubectl run 来启动了第一个 Pod，但是 kubectl run 并不支持所有的功能。在 Kubernetes 中，更经常使用 yaml 文件来定义资源，并通过 kubectl create -f file.yaml 来创建资源.
+
+[root@twok8smaster yaml_demo]# cat file.yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx-app
+  name: nginx-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: nginx-app
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-app
+        ports:
+        - containerPort: 80
+          protocol: TCP
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+[root@twok8smaster yaml_demo]#
+[root@twok8smaster yaml_demo]# kubectl apply -f file.yaml
+Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl ap                          ply
+deployment.extensions/nginx-app configured
+[root@twok8smaster yaml_demo]# kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+nginx-app-7c54fdfc5d-g296r   1/1     Running   0          89s
+[root@twok8smaster yaml_demo]# kubectl get deployment
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-app   1/1     1            1           70m
+[root@twok8smaster yaml_demo]#
+[root@twok8smaster yaml_demo]# kubectl delete deployment nginx-app
+deployment.extensions "nginx-app" deleted
+[root@twok8smaster yaml_demo]#
+重新创建。
+[root@twok8smaster yaml_demo]# kubectl apply -f file.yaml
+deployment.extensions/nginx-app created
+[root@twok8smaster yaml_demo]#
+
+---------------------------------------------使用Service-------------------------
+kubectl expose
+将资源暴露为新的Kubernetes Service.
+[root@twok8smaster yaml_demo]# kubectl expose deployment nginx-app --port=80 --target-port=80 --type=NodePort
+service/nginx-app exposed
+[root@twok8smaster yaml_demo]# kubectl get svc
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP        12d
+nginx-app    NodePort    10.105.193.4   <none>        80:31909/TCP   12s
+[root@twok8smaster yaml_demo]# kubectl get pod  -o wide
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE          NOMINATED NODE   READINESS GATES
+nginx-app-5dd4f9fd4d-7452n   1/1     Running   0          12m   192.168.1.7   twok8snode1   <none>           <none>
+[root@twok8smaster yaml_demo]#
+
+[root@twok8smaster yaml_demo]# kubectl apply -f service.yaml
+Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply
+service/nginx-app configured
+[root@twok8smaster yaml_demo]#
+[root@twok8smaster yaml_demo]# ^C
+[root@twok8smaster yaml_demo]# cat service.yaml
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2018-12-31T10:12:37Z"
+  labels:
+    run: nginx-app
+  name: nginx-app
+  namespace: default
+  resourceVersion: "1567909"
+  selfLink: /api/v1/namespaces/default/services/nginx-app
+  uid: 992f3867-0ce4-11e9-ab8a-eef12635cbeb
+spec:
+  clusterIP: 10.105.193.4
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31909
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: nginx-app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
+
+[root@twok8smaster yaml_demo]#
+[root@twok8smaster yaml_demo]# kubectl delete service nginx-app
+service "nginx-app" deleted
+[root@twok8smaster yaml_demo]# kubectl apply -f service.yaml
+service/nginx-app created
+[root@twok8smaster yaml_demo]#
+
+
+
+
+外部访问：
+
+[root@localhost ~]# curl http://10.175.245.138:31909/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/" target="_blank" rel="noopener">nginx.org</a>.<br>
+Commercial support is available at
+<a href="http://nginx.com/" target="_blank" rel="noopener">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[root@localhost ~]# curl http://10.175.245.140:31909/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/" target="_blank" rel="noopener">nginx.org</a>.<br>
+Commercial support is available at
+<a href="http://nginx.com/" target="_blank" rel="noopener">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[root@localhost ~]#
+[root@localhost ~]# curl http://10.175.245.139:31909/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/" target="_blank" rel="noopener">nginx.org</a>.<br>
+Commercial support is available at
+<a href="http://nginx.com/" target="_blank" rel="noopener">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[root@localhost ~]#
+
+
+
+ServiceType字段的合法值是：
+
+ClusterIP: 仅仅使用一个集群内部的IP地址 - 这是默认值。选择这个值意味着你只想这个服务在集群内部才可以被访问到。
+
+NodePort: 在集群内部IP的基础上，在集群的每一个节点的端口上开放这个服务。你可以在任意<nodeip>:NodePort地址上访问到这个服务。
+
+LoadBalancer: 在使用一个集群内部IP地址和在NodePort上开放一个服务之外，向云提供商申请一个负载均衡器，会让流量转发到这个在每个节点上以<nodeip>:NodePort的形式开放的服务上。
+
+</nodeip></nodeip></none></none></none></none></none></none></none></none></none></code></pre>
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="../../../../../search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Saiun
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="../../../../../imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"><p>coding</p>
+</p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../helm_example/">helm example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="">basics example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../kube_scheduler_example/">kube_scheduler example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../volume_example/">volume example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/03/05/docker-安装与使用-centos/">docker-安装与使用-centos</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/03/02/ansible-安装和使用-centos/">ansible 安装和使用(centos)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/12/快速搭建属于自己的Ubuntu开发环境（Python）/">快速搭建属于自己的Ubuntu开发环境（Python）</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/04/UNIX环境下的编程第八章/">UNIX环境下的编程第八章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/03/UNIX环境下的编程第七章/">UNIX环境下的编程第七章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/01/UNIX环境下的编程第六章/">UNIX环境下的编程第六章</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2016/12/28/UNIX环境下的编程第一章/">UNIX环境下的编程第一章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2016/12/29/UNIX环境下的编程第三章/">UNIX环境下的编程第三章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/01/UNIX环境下的编程第五章/"> UNIX环境下的编程第五章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/01/UNIX环境下的编程第六章/">UNIX环境下的编程第六章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/03/05/docker-安装与使用-centos/">docker-安装与使用-centos</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/01/12/快速搭建属于自己的Ubuntu开发环境（Python）/">快速搭建属于自己的Ubuntu开发环境（Python）</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../../2017/03/02/ansible-安装和使用-centos/">ansible 安装和使用(centos)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../kube_scheduler_example/">kube_scheduler example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../volume_example/">volume example</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../helm_example/">helm example</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+                <li class="">
+                    <a href="#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                <li class="">
+                    <a href="#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                <li class="">
+                    <a href="#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="../../../../../tags/UNIX编程/" style="font-size: 13.973574464466072px;" class="tag-cloud-link">UNIX编程</a>
+    
+    <a href="../../../../../tags/读书笔记/" style="font-size: 9.136643376158492px;" class="tag-cloud-link">读书笔记</a>
+    
+    <a href="../../../../../tags/docker/" style="font-size: 12.285709746733097px;" class="tag-cloud-link">docker</a>
+    
+    <a href="../../../../../tags/centos/" style="font-size: 16.43394597992421px;" class="tag-cloud-link">centos</a>
+    
+    <a href="../../../../../tags/python/" style="font-size: 19.872586391489047px;" class="tag-cloud-link">python</a>
+    
+    <a href="../../../../../tags/Ubuntu/" style="font-size: 18.62783821390787px;" class="tag-cloud-link">Ubuntu</a>
+    
+    <a href="../../../../../tags/开发环境/" style="font-size: 17.24956258226862px;" class="tag-cloud-link">开发环境</a>
+    
+    <a href="../../../../../tags/ansible/" style="font-size: 16.496937362315503px;" class="tag-cloud-link">ansible</a>
+    
+    <a href="../../../../../tags/k8s/" style="font-size: 8.36038460897981px;" class="tag-cloud-link">k8s</a>
+    
+</div>
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/ASaiun/" target="_blank">Github</a>
+    </li>
+    
+</div>
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Saiun Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="../../../../../js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '../../../../../imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="../../../../../js/hs.js"></script>
+<script src="../../../../../js/blog.js"></script>
+
+<script src="../../../../../js/oni.js"></script>
+
+
+
+</html>
