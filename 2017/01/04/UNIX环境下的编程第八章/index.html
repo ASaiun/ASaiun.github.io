@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Saiun">
+    
+    <meta name="description" content="coding">
+    
+    
+    
+    
+    
+    
+    <title>UNIX环境下的编程第八章 | ASaiun&#39;blog</title>
+    <link href=”http://yoursite.com“ rel=”prefetch” />
+
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../../css/aos.css">
+<link rel="stylesheet" href="../../../../css/style.css">
+    <script src="../../../../js/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
+    <script src="../../../../js/aos.js"></script>
+    <script src="../../../../js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="../../../../js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '../../../../imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '../../../../imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://yoursite.com" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="../../../../archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="../../../../about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="../../../../message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="../../../../imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://yoursite.com">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">ASaiun&#39;blog</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="../../../../index.html">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="../../../../about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://yoursite.com">ASaiun&#39;blog</a>
+        >
+        <span>UNIX环境下的编程第八章</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="">UNIX环境下的编程第八章</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="../../../../tags/UNIX编程/">UNIX编程</a>, 
+                
+                <a href="../../../../tags/读书笔记/">读书笔记</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2017-01-04
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="">UNIX环境下的编程第八章</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2017-01-04
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="../../../../tags/UNIX编程/">UNIX编程</a>, 
+                
+                <a href="../../../../tags/读书笔记/">读书笔记</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="进程控制"><a href="#进程控制" class="headerlink" title="进程控制"></a>进程控制</h2><p>进程标识<br>每个进程都有一个非负整型表示的唯一进程ID。因为进程ID标示符，总是唯一的，常将其用来作其他标识符的一部分以保证其唯一性。</p>
+<p>ID为0的进程通常是调度进程，常常被称为交换进程。该进程是内核的一部分，它并不执行任何磁盘上的程序，因此也被称为系统进程。<br>进程ID为1通常是init进程，在自举过程结束时由内核调用。<br>某些UNIX的虚拟存储器实现中，进程ID2是页守护进程，此进程负责支持虚拟存储系统的分页操作。</p>
+<p>函数fork<br>一个现有进程可以调用fork函数创建一个新进程。一般来说，在fork之后是父进程先执行还是子进程先执行是不确定的，这取决于内核所使用的调度算法。</p>
+<p>strlen计算不包括终止null字节的字符串长度，而sizeof需要进行一次函数调用，而对于sizeof而言，因为缓冲区已用已知字符串进行初始化，其长度是固定的，所以sizeof是在编译时计算缓冲区长度。</p>
+<p>文件共享<br>在重定向父进程的标准输入时，子进程的标准输出也被重定向。实际上，fork的一个特性是父进程的所有打开文件描述符都被复制到子进程中</p>
+<p>vfork函数的调用序列和返回值与fork相同，但两者的语义不同。<br>vfork保证子进程先运行，在它调用exec或者exit之后父进程才可能被调度运行，当子进程调用这两个函数中的任意一个时，父进程会恢复运行。</p>
+<p>exit函数<br>一个由init进程收养的进程终止时，它不会变成一个僵死进程。因为init被编写成无论何时只要有一个子进程终止，ini就会调用一个wait函数取得最终状态。这样也就防止了在系统中塞满僵死进程。</p>
+<p>调用wait和waitpid的进程可能会发生：<br>如果其所有子进程都还在运行，则阻塞。<br>如果一个子进程已终止，正等待父进程获取其终止状态，则取得该子进程的终止状态立即返回。<br>如果它没有任何子进程，则立即出错返回。</p>
+<p>waitpid函数提供了wait函数没有的三个功能<br>（1）waitpid可等待一个特定的进程，而wait则返回任一终止子进程的状态。<br>（2）waitpid踢欧冠呢了一个wait的非阻塞版本。有时希望获取一个子进程的状态，但不想阻塞。<br> (3)waitpid通过WUNTRACED和WCONTINUED选项支持作业控制。</p>
+<p>   函数waitid,此函数类似与waitpid，但提供了更多的灵活性。<br>    与waitpid相似，waitid允许一个进程指定要等待的子进程。</p>
+<pre><code>函数wait3和wait4他们提供的功能比POSIX.1函数wait，waitpid和waitid所提供功能的要多一个，这个与附加参数有关。
+
+竞争条件
+如果希望一个进程等待一个子进程终止，则它必须调用wait函数中的一个。如果一个进程要等待其父进程终止，则可以使用下列形式循环：
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">while(getppid()!=1)</span><br><span class="line">    sleep(1);</span><br></pre></td></tr></table></figure>
+
+    这种形式的循环称为论循，它的问题是浪费了ＣＰＵ时间，因为调用者每隔１S都被唤醒，然后进行条件测试。
+
+    函数exec，当进程调用一种exec函数时，该进程执行的程序完全替换为新程序，而新程序则从其main函数开始执行。
+
+    用setuid函数设置实际用户ID和有效用户ID。与此类似，可以用setgid函数设置实际ID和有效ID。
+
+    现在所有UNIX系统都支持解释器文件。这种文件是文本文件夹，其起始行的形式是：
+    #！pathname[optional-argument]
+    在感叹号和pathname之间的空格是可选的。
+
+    system函数，在实现中调用了fork，exec和waitpid。
+</code></pre>
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'UNIX环境下的编程第八章'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="../../../../search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Saiun
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="../../../../imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"><p>coding</p>
+</p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../03/05/docker-安装与使用-centos/">docker-安装与使用-centos</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../03/02/ansible-安装和使用-centos/">ansible 安装和使用(centos)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../12/快速搭建属于自己的Ubuntu开发环境（Python）/">快速搭建属于自己的Ubuntu开发环境（Python）</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="">UNIX环境下的编程第八章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../03/UNIX环境下的编程第七章/">UNIX环境下的编程第七章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../01/UNIX环境下的编程第六章/">UNIX环境下的编程第六章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../01/UNIX环境下的编程第五章/"> UNIX环境下的编程第五章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../2016/12/30/UNIX环境下的编程第四章/">UNIX环境下的编程第四章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../2016/12/29/UNIX环境下的编程第三章/">UNIX环境下的编程第三章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../2016/12/28/UNIX环境下的编程第二章/">UNIX环境下的编程第二章</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../2016/12/28/UNIX环境下的编程第一章/">UNIX环境下的编程第一章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../2016/12/29/UNIX环境下的编程第三章/">UNIX环境下的编程第三章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../03/UNIX环境下的编程第七章/">UNIX环境下的编程第七章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../../2016/12/28/UNIX环境下的编程第二章/">UNIX环境下的编程第二章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../01/UNIX环境下的编程第五章/"> UNIX环境下的编程第五章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="">UNIX环境下的编程第八章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../01/UNIX环境下的编程第六章/">UNIX环境下的编程第六章</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../03/05/docker-安装与使用-centos/">docker-安装与使用-centos</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../12/快速搭建属于自己的Ubuntu开发环境（Python）/">快速搭建属于自己的Ubuntu开发环境（Python）</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="../../../03/02/ansible-安装和使用-centos/">ansible 安装和使用(centos)</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+                <li class="">
+                    <a href="#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                <li class="">
+                    <a href="#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                <li class="">
+                    <a href="#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="../../../../tags/UNIX编程/" style="font-size: 19.226621601631507px;" class="tag-cloud-link">UNIX编程</a>
+    
+    <a href="../../../../tags/读书笔记/" style="font-size: 16.695303893051413px;" class="tag-cloud-link">读书笔记</a>
+    
+    <a href="../../../../tags/docker/" style="font-size: 19.83122139359046px;" class="tag-cloud-link">docker</a>
+    
+    <a href="../../../../tags/centos/" style="font-size: 8.661587753699767px;" class="tag-cloud-link">centos</a>
+    
+    <a href="../../../../tags/python/" style="font-size: 19.937496735655476px;" class="tag-cloud-link">python</a>
+    
+    <a href="../../../../tags/Ubuntu/" style="font-size: 9.067247221203662px;" class="tag-cloud-link">Ubuntu</a>
+    
+    <a href="../../../../tags/开发环境/" style="font-size: 19.944637970217734px;" class="tag-cloud-link">开发环境</a>
+    
+    <a href="../../../../tags/ansible/" style="font-size: 15.850200284572198px;" class="tag-cloud-link">ansible</a>
+    
+</div>
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/ASaiun/" target="_blank">Github</a>
+    </li>
+    
+</div>
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Saiun Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="../../../../js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '../../../../imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="../../../../js/hs.js"></script>
+<script src="../../../../js/blog.js"></script>
+
+<script src="../../../../js/oni.js"></script>
+
+
+
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Wed Jan 04 2017 00:05:06 GMT-0500'
+      window.commentConfig.owner = '24795248'
+      window.commentConfig.repo = 'comment_gitment'
+      window.commentConfig.client_id = '566960f6f4a6a5278e5a'
+      window.commentConfig.client_secret = 'facc6576e69fb3ee3c41639060aaecb6604fbe71'
+      window.commentConfig.redirect_uri = '/'
+    } else {
+      window.commentConfig = {
+      	id: 'Wed Jan 04 2017 00:05:06 GMT-0500',
+        owner: '24795248',
+        repo: 'comment_gitment',
+        client_id: '566960f6f4a6a5278e5a',
+        client_secret: 'facc6576e69fb3ee3c41639060aaecb6604fbe71',
+        redirect_uri: '/'
+      }
+    }
+</script>
+<script src="../../../../js/comment/gitment.js"></script>
+
+</html>
